@@ -134,13 +134,13 @@ while True:
             p2 = 0.5 if max_value == min_value else (hist[1] - min_value) / (max_value - min_value)   
             if k == "storage":
                 draw_line(x * 3, 9 - round(p1 * 9), x * 3 + 3, 9 - round(p2 * 9), 127, 127, 127)
-                draw_number(h75, v * 100, 49, 3, 255, 255, 255)
+                draw_number(h75, str(v * 100)[:4], 49, 3, 255, 255, 255)
             elif k == "memory":
                 draw_line(x * 3, 20 - round(p1 * 9), x * 3 + 3, 20 - round(p2 * 9), 255, 0, 0)
-                draw_number(h75, v * 100, 49, 14, 255, 0, 0)
+                draw_number(h75, str(v * 100)[:4], 49, 14, 255, 0, 0)
             elif k == "cpu":
                 draw_line(x * 3, 31 - round(p1 * 9), x * 3 + 3, 31 - round(p2 * 9), 0, 255, 255)
-                draw_number(h75, v * 100, 49, 25, 0, 255, 255)
+                draw_number(h75, str(v * 100)[:4], 49, 25, 0, 255, 255)
         #print(k, min_value, max_value)
         
     #print()
